@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 50px;
+      }
+      .container {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        /*원근법  */
+        perspective: 300px;
+      }
+      .container .item {
+        width: 100px;
+        height: 100px;
+        border: 4px solid brown;
+        /* box-sizing: border-box; */
+        /* border 가 들어간 만큼 커지지 않겠다... */
+        font-size: 60px;
+        backface-visibility: hidden;
+        /* 뒷면을 화면에서 안보이겠다고 설정함. */
+        transition: 1s;
+      }
+      .container .item.front {
+        position: absolute;
+        /*요소를  겹치게 하는 용도로 💨*/
+        /* 부모요소를 기준으로 배치하겠다 */
+        /* 쌓여져있는 상호작용이 무너지면서 겹쳐진다. */
+        transform: rotateY(0deg);
+      }
+      .container:hover .item.front {
+        transform: rotateY(180deg);
+        /* transform: rotateY(-180deg); */
+        /* 시계방향, 반시계방향의 문제임..!! */
+      }
+      .container .item.back {
+        transform: rotateY(-180deg);
+      }
+      .container:hover .item.back {
+        transform: rotateY(0deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item front">앞</div>
+      <div class="item back">뒤</div>
+    </div>
+  </body>
+</html>
