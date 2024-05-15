@@ -1,27 +1,3 @@
-console.log("JS");
-
-const searchEl = document.querySelector(".search");
-console.log(searchEl);
-const searchInputEl = searchEl.querySelector("input");
-
-searchEl.addEventListener("click", function () {
-  // Logic..
-  searchInputEl.focus();
-});
-
-// 💦왜 focused class를 붙인거지?
-// css적용하려고!! (너비 늘리는거)
-searchInputEl.addEventListener("focus", function () {
-  searchEl.classList.add("focused");
-  searchInputEl.setAttribute("placeholder", "통합검색");
-});
-
-//focus가 해제되었을때
-searchInputEl.addEventListener("blur", function () {
-  searchEl.classList.remove("focused");
-  searchInputEl.setAttribute("placeholder", "");
-});
-
 const badgeEl = document.querySelector("header .badges");
 
 const toTopEl = document.querySelector("#to-top");
@@ -40,7 +16,7 @@ window.addEventListener(
         display: "none",
       });
       //버튼보이기!
-      gsap.to(toTopEl, 0.2, {g
+      gsap.to(toTopEl, 0.2, {
         x: 0,
       });
     } else {
@@ -191,6 +167,3 @@ spyEls.forEach(function (spyEl, index) {
     .setClassToggle(spyEl, "show")
     .addTo(new ScrollMagic.Controller());
 });
-
-let thisYear = new Date().getFullYear();
-document.querySelector(".this-year").textContent = thisYear;
