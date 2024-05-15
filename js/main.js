@@ -40,7 +40,7 @@ window.addEventListener(
         display: "none",
       });
       //버튼보이기!
-      gsap.to(toTopEl, 0.2, {
+      gsap.to(toTopEl, 0.2, {g
         x: 0,
       });
     } else {
