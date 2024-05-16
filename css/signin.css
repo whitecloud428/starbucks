@@ -1,0 +1,116 @@
+section.signin {
+  margin-top: 120px;
+  /* 💗💗💗💗position으로 해결하는게아니라
+  💗⚡⚡⚡⚡margin-top으로 해결하면된다;; */
+  padding: 100px 0 150px;
+  /* 상중하 */
+  background-image: url("../images/signin_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  /* 더 넓은 뷰포트에 맞춰지게된다(확대된다.) */
+}
+
+.signin h1 {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+
+  margin-bottom: 24px;
+}
+
+.signin__card {
+  background-color: #f6f5f0;
+  width: 600px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+  color: #555;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.signin__card h2 {
+  font-size: 20px;
+  padding: 40px 0px;
+}
+
+.signin__card form {
+  border: 1px solid #ccc;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 22px;
+}
+
+.signin__card form input {
+  width: 80%;
+  margin-top: 30px;
+  height: 60px;
+  padding: 15px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+/* 대괄호 : 속성선택자 */
+.signin__card input[type="submit"] {
+  background-color: #006633;
+  color: white;
+  width: calc(600px * 0.8);
+  font-size: 20px;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signin__card p {
+  font-size: 14px;
+  color: #006633;
+  margin: 15px 0;
+  margin-bottom: 25px;
+}
+
+section.signin .actions {
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: pink; */
+  width: 100%;
+  /* border-top: 1px solid #ddd; */
+}
+
+.actions a {
+  display: block;
+  padding: 20px 0;
+  position: relative;
+  /* border-right: 1px solid pink; */
+}
+.actions a:hover {
+  text-decoration: underline;
+}
+.actions a::before {
+  content: "";
+  height: 80px;
+  width: 1px;
+  right: -62px;
+  background-color: #ddd;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.actions a::before:last-child {
+  display: none;
+}

@@ -1,0 +1,44 @@
+section.signin {
+  display: flex;
+  background-color: pink;
+  flex-direction: column;
+  /* height: 1000px; */
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* position: absolute; */
+  /* top: 121.33px; */
+  position: relative;
+
+  /* 💗💗💗💗position으로 해결하는게아니라
+  💗⚡⚡⚡⚡margin-top으로 해결하면된다;; */
+}
+
+.signin .inner {
+  padding: 40px 0 60px 0;
+  /* position: absolute; */
+  /* left: 0; */
+  /* right: 0; */
+  /* margin: 10px 0; */
+  width: 800px;
+  background-color: red;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signin h2 {
+  color: #ccc;
+  font-size: 300px;
+}
+
+.inner .title {
+  text-align: center;
+  font-size: large;
+  color: green;
+}
+.signin .signin__wrapper {
+  background-color: #ccc;
+  width: 100%;
+  height: 600px;
+}
